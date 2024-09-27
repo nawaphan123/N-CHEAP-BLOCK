@@ -273,7 +273,7 @@ class Motor:
 class NCheap():
     def beep(self, time_sec):
         # Control a buzzer connected to Pin 12
-        buzzer = Pin(12, mode=Pin.OUT)
+        buzzer = Pin(13, mode=Pin.OUT)
         buzzer.on()
         sleep(time_sec)
         buzzer.off()
