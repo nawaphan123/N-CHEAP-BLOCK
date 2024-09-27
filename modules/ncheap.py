@@ -274,9 +274,10 @@ class NCheap():
     def beep(self, time_sec):
         # Control a buzzer connected to Pin 12
         buzzer = Pin(13, mode=Pin.OUT)
-        buzzer.on()
+        buzzer.value(1)
         sleep(time_sec)
-        buzzer.off()
+        buzzer.value(0)
+        sleep(0.01)
     # Helper methods for handling inputs and outputs
     def sw1(self):
         # Read the state of switch connected to Pin 15
