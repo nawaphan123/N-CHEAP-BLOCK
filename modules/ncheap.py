@@ -271,7 +271,12 @@ class Motor:
 
 # Combined class for motor control and MPU6050 usage
 class NCheap():
-    
+    def beep(self, time_sec):
+        # Control a buzzer connected to Pin 12
+        buzzer = Pin(12, mode=Pin.OUT)
+        buzzer.on()
+        sleep(time_sec)
+        buzzer.off()
     # Helper methods for handling inputs and outputs
     def sw1(self):
         # Read the state of switch connected to Pin 15
@@ -282,7 +287,7 @@ class NCheap():
         # Wait until the switch is pressed
         while self.sw1() == 1:
             sleep(0.01)
-
+        self.beep(0.3)
     def knob(self):
         # Read the value from a potentiometer (knob) on Pin 36
         knob = ADC(Pin(36))
@@ -304,13 +309,6 @@ class NCheap():
         # Read digital input from the specified pin
         i = Pin(pin, mode=Pin.IN)
         return i.value()
-
-    def beep(self, time_sec):
-        # Control a buzzer connected to Pin 12
-        buzzer = Pin(12, mode=Pin.OUT)
-        buzzer.on()
-        sleep(time_sec)
-        buzzer.off()
 
     def servo(self, pin, rad):
         # Control a servo on one of 4 specified pins
