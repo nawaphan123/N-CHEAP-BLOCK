@@ -1,6 +1,6 @@
 Blockly.Python['setUp'] = function(block) {
   Blockly.Python.definitions_['import ncheap'] = 'from ncheap import NCheap,Motor,Oled,Mpu6050';
-  var code = `\nbot = NCheap()\nm =Motor()\no=Oled()\nmpu = Mpu6050()\n`;
+  var code = `\nbot = NCheap()\nm =Motor()\no=Oled()\nmpu = Mpu6050()\nbot.beep(0.2)\n`;
   return code;
 };
 
@@ -84,7 +84,7 @@ Blockly.Python['input'] = function(block) {
 };
 Blockly.Python['Beep'] = function(block) {
   var time_ = Blockly.Python.valueToCode(block, 'time_', Blockly.Python.ORDER_ATOMIC);
-  var code = `bot.beep(${time_})`;
+  var code = `\nbot.beep(${time_})\n`;
   return code;
 };
 Blockly.Python['servo'] = function(block) {
