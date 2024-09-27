@@ -281,7 +281,7 @@ class NCheap():
     def wait_sw1(self):
         # Wait until the switch is pressed
         while self.sw1() == 1:
-            sleep(1)
+            sleep(0.01)
 
     def knob(self):
         # Read the value from a potentiometer (knob) on Pin 36
