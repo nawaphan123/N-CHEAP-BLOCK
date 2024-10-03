@@ -24,6 +24,28 @@ Blockly.defineBlocksWithJsonArray([
     "tooltip": "beep beep",
     "helpUrl": ""
   },
+  /*---------------------------------motor----------------------------------------------*/
+  {
+    "type": "motor_move",
+    "message0": "Move ( Left Speed %1 %) ( Right Speed %2 %)",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "L_speed",
+        "check": "Number"
+      },
+      {
+        "type": "input_value",
+        "name": "R_speed",
+        "check": "Number"
+      },
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "#ff0000",
+    "tooltip": "",
+    "helpUrl": ""
+  },
   {
     "type": "motor_forward",
     "message0": "Move Forward Speed %1 %",
@@ -39,7 +61,8 @@ Blockly.defineBlocksWithJsonArray([
     "colour": "#ff0000",
     "tooltip": "",
     "helpUrl": ""
-  },{
+  },
+  {
     "type": "motor_backward",
     "message0": "Move Backward Speed %1 %",
     "args0": [
@@ -77,6 +100,38 @@ Blockly.defineBlocksWithJsonArray([
       {
         "type": "input_value",
         "name": "sr_speed",
+        "check": "Number"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "#ff0000",
+    "tooltip": "",
+    "helpUrl": ""
+  }
+  ,{
+    "type": "motor_turnLeft",
+    "message0": "Turn Left ↺ Speed %1 %",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "tl_speed",
+        "check": "Number"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "#ff0000",
+    "tooltip": "",
+    "helpUrl": ""
+  }
+  ,{
+    "type": "motor_turnRight",
+    "message0": "Turn Right ↻ Speed %1 %",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "tr_speed",
         "check": "Number"
       }
     ],
