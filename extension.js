@@ -138,7 +138,7 @@
         {
             xml: `
                 <block type="Beep">
-                    <value name="_time">
+                    <value name="time_">
                         <shadow type="math_number">
                             <field name="NUM">1</field>
                         </shadow>
