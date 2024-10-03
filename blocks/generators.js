@@ -6,33 +6,54 @@ Blockly.Python['setUp'] = function(block) {
 
 
 /*-------------------------------------Motor-------------------------------------------------------*/
+Blockly.Python['motor_move'] = function(block) {
+  Blockly.Python.definitions_['import_motor'] = '';
+  var Lspeed = Blockly.Python.valueToCode(block, 'L_speed', Blockly.Python.ORDER_ATOMIC);
+  var Rspeed = Blockly.Python.valueToCode(block, 'L_speed', Blockly.Python.ORDER_ATOMIC);
+  var code = `\nm.motor(1,${Lspeed})\nm.motor(2,${Rspeed}\n`;
+  return code;
+};
 Blockly.Python['motor_forward'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
   var speed = Blockly.Python.valueToCode(block, 'fd_speed', Blockly.Python.ORDER_ATOMIC);
-  var code = `m.fd(${speed})\n`;
+  var code = `\nm.fd(${speed})\n`;
   return code;
 };
 Blockly.Python['motor_backward'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
   var speed = Blockly.Python.valueToCode(block, 'bk_speed', Blockly.Python.ORDER_ATOMIC);
-  var code = `m.fd(${-speed})\n`;
+  var code = `\nm.fd(${-speed})\n`;
   return code;
 };
 Blockly.Python['motor_spinLeft'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
   var speed = Blockly.Python.valueToCode(block, 'sl_speed', Blockly.Python.ORDER_ATOMIC);
-  var code = `m.sl(${speed})\n`;
+  var code = `\nm.sl(${speed})\n`;
   return code;
 };
 Blockly.Python['motor_spinRight'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
   var speed = Blockly.Python.valueToCode(block, 'sr_speed', Blockly.Python.ORDER_ATOMIC);
-  var code = `m.sr(${speed})\n`;
+  var code = `\nm.sr(${speed})\n`;
   return code;
 };
+
+Blockly.Python['motor_turnLeft'] = function(block) {
+  Blockly.Python.definitions_['import_motor'] = '';
+  var speed = Blockly.Python.valueToCode(block, 'tl_speed', Blockly.Python.ORDER_ATOMIC);
+  var code = `\nm.tl(${speed})\n`;
+  return code;
+};
+Blockly.Python['motor_turnRight'] = function(block) {
+  Blockly.Python.definitions_['import_motor'] = '';
+  var speed = Blockly.Python.valueToCode(block, 'tr_speed', Blockly.Python.ORDER_ATOMIC);
+  var code = `\nm.tr(${speed})\n`;
+  return code;
+};
+
 Blockly.Python['motor_stop'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
-  var code = `m.stop()\n`;
+  var code = `\nm.stop()\n`;
   return code;
 };
 /*-------------------------------------Oled 0.96-------------------------------------------------------*/
