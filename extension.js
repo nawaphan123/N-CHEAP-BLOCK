@@ -135,17 +135,7 @@
         {
             xml: '<label text="For Use Output"></label>',
         },
-        {
-            xml: `
-                <block type="beep">
-                    <value name="_time">
-                        <shadow type="math_number">
-                            <field name="NUM">1</field>
-                        </shadow>
-                    </value>
-                </block>
-            `
-        },
+        "beep",
         {
             xml: `
                 <block type="servo">
@@ -157,7 +147,6 @@
                 </block>
             `
         },
-        
         {
             xml: `
                 <block type="output">
