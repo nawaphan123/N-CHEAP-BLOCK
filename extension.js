@@ -16,6 +16,22 @@
         },
         {
             xml: `
+                <block type="motor_move">
+                    <value name="L_speed">
+                        <shadow type="math_number">
+                            <field name="NUM">50</field>
+                        </shadow>
+                    </value>
+                    <value name="R_speed">
+                        <shadow type="math_number">
+                            <field name="NUM">50</field>
+                        </shadow>
+                    </value>
+                </block>
+            `
+        },
+        {
+            xml: `
                 <block type="motor_forward">
                     <value name="fd_speed">
                         <shadow type="math_number">
@@ -51,6 +67,28 @@
             xml: `
                 <block type="motor_spinRight">
                     <value name="sr_speed">
+                        <shadow type="math_number">
+                            <field name="NUM">50</field>
+                        </shadow>
+                    </value>
+                </block>
+            `
+        },
+        {
+            xml: `
+                <block type="motor_turnRight">
+                    <value name="tr_speed">
+                        <shadow type="math_number">
+                            <field name="NUM">50</field>
+                        </shadow>
+                    </value>
+                </block>
+            `
+        },
+        {
+            xml: `
+                <block type="motor_turnLeft">
+                    <value name="tl_speed">
                         <shadow type="math_number">
                             <field name="NUM">50</field>
                         </shadow>
