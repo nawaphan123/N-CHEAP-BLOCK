@@ -135,13 +135,33 @@
         {
             xml: '<label text="For Use Output"></label>',
         },
-        "Beep",
-        "servo",
+        {
+            xml: `
+                <block type="beep">
+                    <value name="_time">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+                </block>
+            `
+        },
+        {
+            xml: `
+                <block type="servo">
+                    <value name="degree">
+                        <shadow type="math_number">
+                            <field name="NUM">90</field>
+                        </shadow>
+                    </value>
+                </block>
+            `
+        },
         
         {
             xml: `
                 <block type="output">
-                    <value name="pinvalue">
+                    <value name="pin_value">
                         <shadow type="math_number">
                             <field name="NUM">1</field>
                         </shadow>
