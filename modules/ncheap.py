@@ -268,6 +268,12 @@ class Motor:
         # Spin right by reversing the other motor
         self.motor(1, _speed)
         self.motor(2, -_speed)
+    def tl(self,_speed):
+        self.motor(1,0)
+        self.motor(2,_speed)
+    def tr(self,_speed):
+        self.motor(1,_speed)
+        self.motor(2,0)
 
 # Combined class for motor control and MPU6050 usage
 class NCheap():
