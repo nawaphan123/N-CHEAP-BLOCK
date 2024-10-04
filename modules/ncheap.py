@@ -319,10 +319,7 @@ class NCheap():
 
     def servo(self, pin, rad):
         # Control a servo on one of 4 specified pins
-        ser_pin = [23, 19, 18, 5]
-        ser = PWM(Pin(ser_pin[pin-1]))
-        ser.freq(50)
-        ser.duty(int(25.57 + ((rad / 180.0) * 102.3)))
+        PWM(Pin(ser_pin[-1]), freq=50).duty(int(25.57 + (((rad) / 180.0) * 102.3)))
 
 
 
