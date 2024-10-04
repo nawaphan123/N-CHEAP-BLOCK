@@ -207,17 +207,17 @@ class Mpu6050:
         self.angle[2] = self.gyro_angle[2]  # Only use gyro for Z angle (yaw)
 
     # Return the roll angle (X-axis)
-    def roll(self):
+    def angleX(self):
         self.update()
         return int(self.angle[0]+180)
 
     # Return the pitch angle (Y-axis)
-    def pictch(self):
+    def angleY(self):
         self.update()
         return int(self.angle[1]+180)
 
     # Return the yaw angle (Z-axis)
-    def yaw(self):
+    def angleZ(self):
         self.update()
         return int(self.angle[2]+180)
 
