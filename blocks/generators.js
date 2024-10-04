@@ -109,7 +109,7 @@ Blockly.Python['Beep'] = function(block) {
   return code;
 };
 Blockly.Python['servo'] = function(block) {
-  Blockly.Python.definitions_['import PWM'] = 'from machine import PWM';
+  Blockly.Python.definitions_['import PWM'] = 'from machine import PWM,Pin';
   var dropdown_pin = block.getFieldValue('pin');
   var pin_value = Blockly.Python.valueToCode(block, 'degree', Blockly.Python.ORDER_ATOMIC);
   var code = `\nPWM(Pin(${dropdown_pin}), freq=50).duty(int(25.57 + (((${pin_value}) / 180.0) * 102.3)))\n`;
