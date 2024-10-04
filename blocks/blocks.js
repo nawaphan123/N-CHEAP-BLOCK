@@ -198,15 +198,15 @@ Blockly.defineBlocksWithJsonArray([
         "options": [
           [
             "X",
-            "roll"
+            "angleX"
           ],
           [
             "Y",
-            "picth"
+            "angleY"
           ],
           [
             "Z",
-            "yaw"
+            "angleZ"
           ]
         ]
       }
