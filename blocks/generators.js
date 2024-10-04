@@ -10,7 +10,7 @@ Blockly.Python['motor_move'] = function(block) {
   Blockly.Python.definitions_['import_motor'] = '';
   var Lspeed = Blockly.Python.valueToCode(block, 'L_speed', Blockly.Python.ORDER_ATOMIC);
   var Rspeed = Blockly.Python.valueToCode(block, 'L_speed', Blockly.Python.ORDER_ATOMIC);
-  var code = `\nm.motor(1,${Lspeed})\nm.motor(2,${Rspeed}\n`;
+  var code = `\nm.motor(1,${Lspeed})\nm.motor(2,${Rspeed})\n`;
   return code;
 };
 Blockly.Python['motor_forward'] = function(block) {
