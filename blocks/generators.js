@@ -111,7 +111,7 @@ Blockly.Python['Beep'] = function(block) {
 Blockly.Python['servo'] = function(block) {
   var dropdown_pin = block.getFieldValue('pin');
   var pin_value = Blockly.Python.valueToCode(block, 'degree', Blockly.Python.ORDER_ATOMIC);
-  var code = `\nbot.servo(${dropdown_pin},${pin_value})\n`;
+  var code = `\nPWM(Pin(dropdown_pin), freq=50).duty(int(25.57 + (((pin_value) / 180.0) * 102.3)))\n`;
   return code;
 };
 Blockly.Python['waitsw1'] = function(block) {
