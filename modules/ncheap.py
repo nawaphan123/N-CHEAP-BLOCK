@@ -308,7 +308,7 @@ class NCheap():
             adc.atten(ADC.ATTN_11DB)
             return adc.read()
         else:
-            adc = ADC2(Pin(pin))
+            adc = ADC2(Pin(pin): unit=ADC2)
             adc.atten(ADC.ATTN_11DB)
             return adc.read()
 
