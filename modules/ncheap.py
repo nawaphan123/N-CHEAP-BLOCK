@@ -303,9 +303,14 @@ class NCheap():
 
     def analog_read(self, pin):
         # Read analog value from a specified pin
-        adc = ADC(Pin(pin))
-        adc.atten(ADC.ATTN_11DB)
-        return adc.read()
+        if(pin > 27):
+            adc = ADC(Pin(pin))
+            adc.atten(ADC.ATTN_11DB)
+            return adc.read()
+        else:
+            adc = ADC2(Pin(pin))
+            adc.atten(ADC.ATTN_11DB)
+            return adc.read()
 
     def output(self, pin, state):
         # Set a digital output on the specified pin
