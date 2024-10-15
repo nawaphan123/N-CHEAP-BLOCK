@@ -314,7 +314,6 @@ class NCheap():
             adc.atten(ADC.ATTN_11DB)
             ADCR = adc.read()
             wlan.active(True)
-            print(f"ADC: {ADCR}")
             return  ADCR
         
             
