@@ -324,9 +324,9 @@ class NCheap():
         m1b = PWM(Pin(m1b), 5000)
         if pin == 2:
             if state > 0:
-                self.m1b.duty(1023)
-            elif state <= 0:
                 self.m1b.duty(0)
+            elif state <= 0:
+                self.m1b.duty(1023)
         o = Pin(pin, mode=Pin.OUT)
         o.value(state)
 
