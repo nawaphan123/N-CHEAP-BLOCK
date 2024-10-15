@@ -286,7 +286,7 @@ Blockly.defineBlocksWithJsonArray([
           ,
           [
             "A9",
-            "13"
+            "12"
           ]
 
         ]
@@ -349,8 +349,8 @@ Blockly.defineBlocksWithJsonArray([
           ]
           ,
           [
-            "13",
-            "13"
+            "12",
+            "12"
           ]
           ,
           [
@@ -423,8 +423,8 @@ Blockly.defineBlocksWithJsonArray([
           ]
           ,
           [
-            "13",
-            "13"
+            "12",
+            "12"
           ]
         ]
       },
