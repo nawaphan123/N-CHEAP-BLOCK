@@ -3,7 +3,7 @@
     description: "Extention for N-CHEAP BOARD",
     author: "Nawa Phansaen",
     category: "Device Control",
-    version: "1.0.0",
+    version: "1.0.1",
     icon: "/static/icon.png", // Category icon
     color: "#d63838", // Category color (recommend some blocks color)
     blocks: [ // Blocks in Category
