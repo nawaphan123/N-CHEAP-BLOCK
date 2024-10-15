@@ -3,15 +3,15 @@ from time import sleep  # Import sleep function for delays
 # Import additional necessary modules
 from utime import sleep_ms  # Import sleep function from utime for millisecond delays
 from machine import I2C, Pin  # Import I2C and Pin for communication with MPU6050
-import time  # Import time functions
 from math import sqrt, degrees, acos, atan2  # Import math functions for angle calculations
 
 #####
-import time
 import framebuf
 from machine import Pin, SoftI2C
 from time import sleep
-
+import network
+# Disable Wi-Fi to allow ADC2 usage
+wlan = network.WLAN(network.STA_IF)
 
 
 # Register definitions
@@ -308,9 +308,7 @@ class NCheap():
             adc.atten(ADC.ATTN_11DB)
             return adc.read()
         else:
-            import network
-            # Disable Wi-Fi to allow ADC2 usage
-            wlan = network.WLAN(network.STA_IF)
+
             wlan.active(False)
             adc = ADC(Pin(pin))
             adc.atten(ADC.ATTN_11DB)
