@@ -4,7 +4,7 @@ from time import sleep  # Import sleep function for delays
 from utime import sleep_ms  # Import sleep function from utime for millisecond delays
 from machine import I2C, Pin  # Import I2C and Pin for communication with MPU6050
 from math import sqrt, degrees, acos, atan2  # Import math functions for angle calculations
-
+import time
 #####
 import framebuf
 from machine import Pin, SoftI2C
