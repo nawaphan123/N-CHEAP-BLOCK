@@ -303,9 +303,22 @@ class NCheap():
 
     def analog_read(self, pin):
         # Read analog value from a specified pin
-        adc = ADC(Pin(pin))
-        adc.atten(ADC.ATTN_11DB)
-        return adc.read()
+        if pin > 27:
+            adc = ADC(Pin(pin))
+            adc.atten(ADC.ATTN_11DB)
+            return adc.read()
+        else:
+            import network
+            # Disable Wi-Fi to allow ADC2 usage
+            wlan = network.WLAN(network.STA_IF)
+            wlan.active(False)
+            adc = ADC(Pin(pin))
+            adc.atten(ADC.ATTN_11DB)
+            ADCR = adc.read()
+            wlan.active(True)
+            return  ADCR
+        
+            
 
     def output(self, pin, state):
         # Set a digital output on the specified pin
