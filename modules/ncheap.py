@@ -72,8 +72,8 @@ class Oled:
             SET_CHARGE_PUMP, 0x10 if self.external_vcc else 0x14,
             SET_DISP | 0x01): # display on
             self.write_cmd(cmd)
-        self.write_cmd(SET_COM_OUT_DIR)             # mirror vertically
-        self.write_cmd(SET_SEG_REMAP)               # mirror horizontally (64 rows)
+        # self.write_cmd(SET_COM_OUT_DIR)             # mirror vertically
+        # self.write_cmd(SET_SEG_REMAP)               # mirror horizontally (64 rows)
         self.fill(0)
         self.show()
 
